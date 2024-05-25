@@ -1,0 +1,12 @@
+<label for="">Name:</label>
+<input type="text" name="" id="" #product><br><br>
+<button type="button" (click)="addProduct(product.value)">CreateProduct</button>
+<p [hidden]="!isShow">Flat Discount@10%</p>
+<ul>
+    <ng-container *ngFor="let list of productList;index as i;">
+        <li [ngClass]="{'index':'i'}" [ngStyle]="{'background-Color':i<9?'none':'blue',
+        'color':i<15?'none':'yellow'}">
+            {{i+1}},{{list}}
+        </li>
+    </ng-container>
+</ul>
